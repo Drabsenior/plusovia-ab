@@ -1,0 +1,17 @@
+.Logocontainer img {
+  width: 300px;
+  height: 250px;
+  padding: 40px;
+}
+@media screen and (max-width: 600px) {
+  .Logocontainer img {
+    width: 150px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .Logocontainer img {
+    width: 100px;
+    height: 70px;
+  }
+}

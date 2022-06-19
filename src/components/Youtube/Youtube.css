@@ -1,0 +1,19 @@
+.youtubewrapper {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.youtubewrapper iframe {
+  width: 80%;
+  height: 80vh;
+}
+@media screen and (max-width: 500px) {
+  .youtubewrapper iframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vh;
+    height: 50vh;
+  }
+}
