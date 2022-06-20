@@ -80,6 +80,11 @@
     justify-content: center;
     margin-bottom: 40px;
   }
+  .roompageright {
+    display: flex;
+    justify-content: start;
+    margin-left: 0px;
+  }
 }
 @media screen and (max-width: 450px) {
   .roompageright img {
@@ -88,5 +93,19 @@
     align-items: center;
     width: 90%;
     margin: 15px;
+  }
+  .roompagetopcontain {
+    background-color: #ffd232;
+    display: flex;
+    padding: 0px;
+    width: 100vw;
+  }
+  .roompageright img {
+    width: 90vw;
+    margin-right: 0px;
+    height: 500px;
+    border-radius: 0px;
+    object-fit: cover;
+    margin-bottom: 15px;
   }
 }
