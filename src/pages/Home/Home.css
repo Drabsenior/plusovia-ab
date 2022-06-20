@@ -131,23 +131,26 @@
     text-align: center;
   }
   .homebottomdescmobile span {
-    margin-top: 60px;
+    margin-top: 40px;
+    font-size: 24px;
   }
   .homebottomdescmobile p {
-    width: 70%;
+    width: 80%;
+    font-size: 15px;
   }
   .hometopcontent img {
     position: relative;
     z-index: -1;
     width: 95%;
+    border-radius: 0px;
     height: calc(80vh - 100px);
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 395px) {
   .hometopdesc {
     position: absolute;
     left: 10%;
-    top: 20%;
+    top: 10%;
   }
   .head1 {
     font-size: 30px;
@@ -156,6 +159,21 @@
     font-size: 30px;
   }
   .hometopcontent {
-    padding: 5px;
+    padding: 0px;
+  }
+  .hometopcontent img {
+    position: relative;
+    z-index: -1;
+    width: 95%;
+    border-radius: 0px;
+    height: calc(90vh - 100px);
+  }
+  .hometopdesc p {
+    width: 80%;
+    font-size: 20px;
+  }
+  .homebottommobile img {
+    position: relative;
+    height: 55vh;
   }
 }
