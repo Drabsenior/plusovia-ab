@@ -145,6 +145,10 @@
     border-radius: 0px;
     height: calc(80vh - 100px);
   }
+  .homebottommobile img {
+    position: relative;
+    height: 65vh;
+  }
 }
 @media screen and (max-width: 395px) {
   .hometopdesc {
