@@ -1,6 +1,7 @@
 import React from "react";
 import Room from "../../components/Room/Room";
 import { AiFillStar } from "react-icons/ai";
+import { BsDot } from "react-icons/bs";
 import "./Rooms.css";
 import Youtube from "../../components/Youtube/Youtube";
 import Logo from "../../components/Logo/Logo";
@@ -26,9 +27,18 @@ const Rooms = () => {
             </div>
           </div>
           <ul>Including</ul>
-          <li>Bathroom</li>
-          <li>Tv</li>
-          <li>Cooler and microwave</li>
+          <li>
+            <BsDot />
+            Bathroom
+          </li>
+          <li>
+            <BsDot />
+            Tv
+          </li>
+          <li>
+            <BsDot />
+            Cooler and microwave
+          </li>
           <div className="roombutton">
             <button>Book Now</button>
           </div>

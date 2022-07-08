@@ -27,6 +27,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <br />
       <div className="aboutcontent2">
         <img
           src="https://us.123rf.com/450wm/belchonock/belchonock1903/belchonock190302428/122290271-comfortable-bed-with-new-mattress-in-room-healthy-sleep.jpg?ver=6"
