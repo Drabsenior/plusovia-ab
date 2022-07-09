@@ -119,4 +119,15 @@
     margin-bottom: 0px;
     overflow: hidden !important;
   }
+  .roombutton {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    align-items: center;
+    margin-left: -15px;
+  }
+  .roombutton button {
+    padding: 15px 0px;
+    width: 300px;
+  }
 }
