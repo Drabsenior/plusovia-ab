@@ -1,12 +1,10 @@
 import React from "react";
 import "./Logo.css";
+import Logokokeb from "../../assets/Images/logo.png";
 const Logo = () => {
   return (
     <div className="Logocontainer">
-      <img
-        src="https://thumbs.dreamstime.com/b/b-letter-boutique-logo-design-159417325.jpg"
-        alt=""
-      />
+      <img src={Logokokeb} alt="" />
     </div>
   );
 };

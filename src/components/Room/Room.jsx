@@ -2,19 +2,25 @@ import React from "react";
 import { AiFillStar } from "react-icons/ai";
 import { CgArrowLongRight } from "react-icons/cg";
 import "./Room.css";
+import Room1 from "../../assets/Images/room1.png";
+import Room2 from "../../assets/Images/room2.png";
+import Room3 from "../../assets/Images/room3.png";
 const Rooms = () => {
   const items = [
     {
-      image:
-        "https://static01.nyt.com/images/2020/10/25/realestate/19shopping1/oakImage-1602795344944-mobileMasterAt3x.jpg",
+      image: Room1,
       name: "Master Bed Room Sweet",
-      price: "3000birr",
+      price: "800birr",
     },
     {
-      image:
-        "https://www.naturalbedcompany.co.uk/wp-content/uploads/Cochin-bed-in-cherry-MAIN.jpg",
-      name: "Master Bed Room Sweet",
-      price: "3000birr",
+      image: Room2,
+      name: "Double Bed Room",
+      price: "600birr",
+    },
+    {
+      image: Room3,
+      name: "Single Bed Room",
+      price: "450birr",
     },
   ];
   return (

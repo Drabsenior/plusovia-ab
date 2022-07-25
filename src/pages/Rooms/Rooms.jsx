@@ -6,6 +6,8 @@ import "./Rooms.css";
 import Youtube from "../../components/Youtube/Youtube";
 import Logo from "../../components/Logo/Logo";
 import Navbar from "../../components/Navbar/Navbar";
+import Room1 from "../../assets/Images/roomimage.png";
+import About1 from "../../assets/Images/about2.png";
 const Rooms = () => {
   return (
     <div className="roompagewrapper">
@@ -44,18 +46,12 @@ const Rooms = () => {
           </div>
         </div>
         <div className="roompageright">
-          <img
-            src="https://homedecorideas.eu/wp-content/uploads/2019/07/Master-Bedroom-Inspirations-By-Top-Interior-Designers-2-1.jpg"
-            alt=""
-          />
+          <img src={Room1} alt="" />
         </div>
       </div>
       <Room />
       <div className="aboutcontent2">
-        <img
-          src="https://us.123rf.com/450wm/belchonock/belchonock1903/belchonock190302428/122290271-comfortable-bed-with-new-mattress-in-room-healthy-sleep.jpg?ver=6"
-          alt=""
-        />
+        <img src={About1} alt="" />
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

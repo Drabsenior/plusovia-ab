@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { HiMenu } from "react-icons/hi";
 import { VscChromeClose } from "react-icons/vsc";
+import Kobeb_logo from "../../assets/Images/kokeb logo.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -12,10 +13,7 @@ const Navbar = () => {
   return (
     <div className="navbarwrapper">
       <div className="navlogo">
-        <img
-          src="https://thumbs.dreamstime.com/b/b-letter-boutique-logo-design-159417325.jpg"
-          alt=""
-        />
+        <img src={Kobeb_logo} alt="" />
       </div>
       <div className="Mobilescreen">
         <div className="MenuIcon" onClick={handleOpen}>

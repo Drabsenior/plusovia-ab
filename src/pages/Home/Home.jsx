@@ -4,16 +4,14 @@ import Navbar from "../../components/Navbar/Navbar";
 import Rooms from "../../components/Room/Room";
 import Youtube from "../../components/Youtube/Youtube";
 import "./Home.css";
+import Kokeb1 from "../../assets/Images/kokeb1.png";
+import Building from "../../assets/Images/penbuild.png";
 const Home = () => {
   return (
     <div className="homewrapper">
       <Navbar />
       <div className="hometopcontent">
-        <img
-          src="https://www.e-architect.com/wp-content/uploads/2016/08/fairmont-pacific-rim-hotel-j190816-f2.jpg"
-          alt=""
-          id="image1"
-        />
+        <img src={Kokeb1} alt="" id="image1" />
         <div className="hometopdesc">
           <div className="hometitle">
             <h2 className="head1">Pension</h2>
@@ -62,10 +60,7 @@ const Home = () => {
           </p>
         </div>
         <div className="homebottomright">
-          <img
-            src="https://images.unsplash.com/photo-1495365200479-c4ed1d35e1aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aG90ZWwlMjBoYWxsd2F5fGVufDB8fDB8fA%3D%3D&w=1000&q=80"
-            alt=""
-          />
+          <img src={Building} alt="" />
         </div>
       </div>
       <Logo />

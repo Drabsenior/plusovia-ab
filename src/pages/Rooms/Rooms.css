@@ -11,16 +11,17 @@
   justify-content: space-around;
 }
 .roompageright {
-  width: 80%;
+  width: 100%;
   display: flex;
   margin-left: -20px;
   display: flex;
   justify-content: start;
   align-items: center;
+  margin-top: 80px;
 }
 .roompageright img {
-  width: 500px;
-  height: 538px;
+  width: 650px;
+  height: 438px;
   object-fit: cover;
   border-radius: 25px;
   margin-bottom: 55px;
