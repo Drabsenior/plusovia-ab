@@ -16,10 +16,8 @@ const Rooms = () => {
         <div className="roompageleft">
           <h3>Master Bed room sweet</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam
-          </p>
+          Our Master bed rooms are the highest levels of our service encompassing all our high end quality service this will be a choice you won't regret.
+          </p>s
           <div className="roomprice">
             <span>2400 birr</span>
             <div className="roomicons">

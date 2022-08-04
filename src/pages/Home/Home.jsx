@@ -18,10 +18,7 @@ const Home = () => {
             <h2 className="head2">Addis abeba</h2>
           </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.{" "}
+   Welcome to our little paradise were you can enjoy and relax after a hard day of work in our clean and peaceful pension with every service are at the highest standard.
           </p>
           <button>Book Now</button>
         </div>
@@ -34,7 +31,7 @@ const Home = () => {
           alt=""
         />
         <div className="homebottomdescmobile">
-          <span>Lorem ipsum dolor sit amet</span>
+          <span>What makes our pension the best?</span>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -48,15 +45,9 @@ const Home = () => {
       </div>
       <div className="homebottomcontent">
         <div className="homebottomleft">
-          <span>Lorem ipsum dolor sit amet</span>
+          <span>What makes our pension the best?</span>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+Our   quiet and peaceful location is what give our customers the hightest satisfaction for it's an ideal place to calm and relax where your body need it's rest. Our cool and calm environment is not our only edge to our pension rather also it's friendly and hard working staff that always ready to serve your every need for your happiness is our most valued treasure. Don't waste any more of your precious time and book our rooms and enjoy the best service your dreaming of for we are prepared to make your time with us the best for our client deserve the best.
           </p>
         </div>
         <div className="homebottomright">

@@ -16,13 +16,8 @@ const About = () => {
           <div className="abouttopcontent">
             <h2>About us</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.{" "}
+           Our pension is a veteran of the pension and room service with many years of experience under our belt we are ready to provide you with the best service that you can imagine and deserve with multiple varity of room available 
+           for you or your family to relax and have a comfortable time .
             </p>
           </div>
         </div>
@@ -31,23 +26,13 @@ const About = () => {
       <div className="aboutcontent2">
         <img src={About2} alt="" />
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-          ut aliquip ex ea commodo consequat.{" "}
+        If you are a long term staying client don't worry because here in kokeb pension we prepared excellent furnished room that can accommodate your needs and 24/7 available room service on the tip of your phone with our many years experience and wonderful employee we have made high quality standard with our clients.
         </p>
       </div>
 
       <div className="aboutcontent3">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-          ut aliquip ex ea commodo consequat.{" "}
+And another big difference that make us stand out from our other competitors in pension and hotel service industry is our ideal location that is easy and very convent for transportation or other services. Come and enjoy a peaceful time with our pension with high end service and hospitality.
         </p>
 
         <img src={About3} alt="" />
