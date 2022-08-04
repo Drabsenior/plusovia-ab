@@ -26,7 +26,7 @@ const About = () => {
       <div className="aboutcontent2">
         <img src={About2} alt="" />
         <p>
-        If you are a long term staying client don't worry because here in kokeb pension we prepared excellent furnished room that can accommodate your needs and 24/7 available room service on the tip of your phone with our many years experience and wonderful employee we have made high quality standard with our clients.
+        If you are a long term staying customer don't worry because here in kokeb pension we here prepared an  excellent fully  furnished room that can accommodate your every needs 24/7 with room service available on the tip of your phone to serve your needs with our many years experience , wonderful and highly trained employee are our crown jewels that gave us our prestigious client All our service are meeting and exceeding every standard of quality and sanitation set by the standard providing agency.
         </p>
       </div>
 

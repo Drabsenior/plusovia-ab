@@ -17,7 +17,7 @@ const Rooms = () => {
           <h3>Master Bed room sweet</h3>
           <p>
           Our Master bed rooms are the highest levels of our service encompassing all our high end quality service this will be a choice you won't regret.
-          </p>s
+          </p>
           <div className="roomprice">
             <span>2400 birr</span>
             <div className="roomicons">
@@ -51,12 +51,7 @@ const Rooms = () => {
       <div className="aboutcontent2">
         <img src={About1} alt="" />
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-          ut aliquip ex ea commodo consequat.
+        If you are a long term staying customer don't worry because here in kokeb pension we here prepared an  excellent fully  furnished room that can accommodate your every needs 24/7 with room service available on the tip of your phone to serve your needs with our many years experience , wonderful and highly trained employee are our crown jewels that gave us our prestigious client All our service are meeting and exceeding every standard of quality and sanitation set by the standard providing agency.
         </p>
       </div>
       <Youtube />
