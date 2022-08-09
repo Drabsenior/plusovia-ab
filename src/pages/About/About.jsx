@@ -36,6 +36,7 @@ And another big difference that make us stand out from our other competitors in 
         </p>
 
         <img src={About3} alt="" />
+        <h2></h2>
       </div>
       <Room />
       <Logo />
