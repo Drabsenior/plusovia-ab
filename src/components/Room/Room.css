@@ -26,6 +26,10 @@
   margin-right: 50px;
   margin-bottom: 50px;
   color: #295283;
+  box-shadow: 3px 3px 8px 3px rgba(105, 94, 94, 0.75);
+  -webkit-box-shadow: 3px 3px 8px 3px rgba(105, 94, 94, 0.75);
+  -moz-box-shadow: 3px 3px 8px 3px rgba(105, 94, 94, 0.75);
+  cursor: pointer;
 }
 .roomdetail {
   margin-top: -5px;

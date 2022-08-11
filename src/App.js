@@ -6,13 +6,17 @@ import Rooms from "./pages/Rooms/Rooms";
 import { BrowserRouter } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
+import Singleroom from "./components/Singleroom/Singleroom";
+import ScrollToTop from "./ScrollTop";
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/about" element={<About />} />
         <Route path="/rooms" element={<Rooms />} />
         <Route exact path="/" element={<Home />}></Route>
+        <Route path="/room/:Id" element={<Singleroom />}></Route>
       </Routes>
     </BrowserRouter>
   );

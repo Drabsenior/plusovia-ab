@@ -1,11 +1,11 @@
 import React from "react";
-import Logo from "../../components/Logo/Logo";
 import Navbar from "../../components/Navbar/Navbar";
 import Rooms from "../../components/Room/Room";
 import Youtube from "../../components/Youtube/Youtube";
 import "./Home.css";
 import Kokeb1 from "../../assets/Images/kokeb1.png";
 import Building from "../../assets/Images/penbuild.png";
+import Footer from "../../components/Footer/Footer";
 const Home = () => {
   return (
     <div className="homewrapper">
@@ -18,7 +18,9 @@ const Home = () => {
             <h2 className="head2">Addis abeba</h2>
           </div>
           <p>
-   Welcome to our little paradise were you can enjoy and relax after a hard day of work in our clean and peaceful pension with every service are at the highest standard.
+            Welcome to our little paradise were you can enjoy and relax after a
+            hard day of work in our clean and peaceful pension with every
+            service are at the highest standard.
           </p>
           <button>Book Now</button>
         </div>
@@ -33,7 +35,15 @@ const Home = () => {
         <div className="homebottomdescmobile">
           <span>What makes our pension the best?</span>
           <p>
-          Our   quiet and peaceful location is what give our customers the hightest satisfaction for it's an ideal place to calm and relax where your body need it's rest. Our cool and calm environment is not our only edge to our pension rather also it's friendly and hard working staff that always ready to serve your every need for your happiness is our most valued treasure. Don't waste any more of your precious time and book our rooms and enjoy the best service your dreaming of for we are prepared to make your time with us the memorable for our client deserve the best.
+            Our quiet and peaceful location is what give our customers the
+            hightest satisfaction for it's an ideal place to calm and relax
+            where your body need it's rest. Our cool and calm environment is not
+            our only edge to our pension rather also it's friendly and hard
+            working staff that always ready to serve your every need for your
+            happiness is our most valued treasure. Don't waste any more of your
+            precious time and book our rooms and enjoy the best service your
+            dreaming of for we are prepared to make your time with us the
+            memorable for our client deserve the best.
           </p>
         </div>
       </div>
@@ -41,14 +51,22 @@ const Home = () => {
         <div className="homebottomleft">
           <span>What makes our pension the best?</span>
           <p>
-Our   quiet and peaceful location is what give our customers the hightest satisfaction for it's an ideal place to calm and relax where your body need it's rest. Our cool and calm environment is not our only edge to our pension rather also it's friendly and hard working staff that always ready to serve your every need for your happiness is our most valued treasure. Don't waste any more of your precious time and book our rooms and enjoy the best service your dreaming of for we are prepared to make your time with us the memorable for our client deserve the best.
+            Our quiet and peaceful location is what give our customers the
+            hightest satisfaction for it's an ideal place to calm and relax
+            where your body need it's rest. Our cool and calm environment is not
+            our only edge to our pension rather also it's friendly and hard
+            working staff that always ready to serve your every need for your
+            happiness is our most valued treasure. Don't waste any more of your
+            precious time and book our rooms and enjoy the best service your
+            dreaming of for we are prepared to make your time with us the
+            memorable for our client deserve the best.
           </p>
         </div>
         <div className="homebottomright">
           <img src={Building} alt="" />
         </div>
       </div>
-      <Logo />
+      <Footer />
     </div>
   );
 };

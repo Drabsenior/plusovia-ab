@@ -1,0 +1,142 @@
+.footercontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 50vh;
+  width: 100%;
+}
+.footer1container {
+  display: flex;
+  justify-content: center;
+  padding-left: 6%;
+  padding-right: 2%;
+  flex-direction: column;
+  width: 20%;
+  color: #295283;
+}
+.footer1container h2 {
+  font-family: "Josefin Slab", serif;
+}
+.footer2container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 6%;
+
+  width: 26%;
+  color: #295283;
+}
+.footer2container h2 {
+  font-family: "IM Fell French Canon SC", serif;
+}
+.footer3container h2 {
+  font-family: "IM Fell French Canon SC", serif;
+}
+.footer2container p {
+  width: 300px;
+  margin-top: -5px;
+  font-family: "Iceland", cursive;
+  font-size: 19px;
+}
+.footer3container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 28%;
+  padding-left: 5%;
+  color: #295283;
+}
+.footer3container p {
+  width: 450px;
+  margin-top: -10px;
+  font-family: "Iceland", cursive;
+  font-size: 19px;
+}
+
+.logofooter {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+.facebookicon {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+.twittericon {
+  width: 32px;
+  height: 34px;
+  object-fit: contain;
+  margin-left: 5px;
+}
+.instaicon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  margin-left: 2px;
+  margin-bottom: 3px;
+}
+.youtubeicon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  margin-left: 7px;
+  margin-bottom: 3px;
+}
+@media screen and (max-width: 600px) {
+  .footercontainer {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    height: 100vh;
+    flex: 10;
+  }
+  .footer1container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0%;
+    flex-direction: column;
+    flex: 8;
+    color: #295283;
+  }
+
+  .footer2container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 0%;
+    flex: 1;
+    color: #295283;
+  }
+  .footer2container p {
+    text-align: center;
+  }
+  .footer3container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    padding-left: 0%;
+    color: #295283;
+  }
+  .footer3container p {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .footercontainer {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .footer1container {
+    flex: 1;
+  }
+}

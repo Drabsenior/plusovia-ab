@@ -13,7 +13,9 @@ const Navbar = () => {
   return (
     <div className="navbarwrapper">
       <div className="navlogo">
-        <img src={Kobeb_logo} alt="" />
+        <Link to="/">
+          <img src={Kobeb_logo} alt="" />
+        </Link>
       </div>
       <div className="Mobilescreen">
         <div className="MenuIcon" onClick={handleOpen}>
