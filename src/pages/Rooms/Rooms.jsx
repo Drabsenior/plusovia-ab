@@ -12,7 +12,7 @@ const Rooms = () => {
   return (
     <div className="roompagewrapper">
       <Navbar />
-      <div className="roompagetopcontain">
+      {/* <div className="roompagetopcontain">
         <div className="roompageleft">
           <h3>Master Bed room sweet</h3>
           <p>
@@ -48,7 +48,7 @@ const Rooms = () => {
         <div className="roompageright">
           <img src={Room1} alt="" />
         </div>
-      </div>
+      </div> */}
       <Room />
       <div className="aboutcontent2">
         <img src={About1} alt="" />

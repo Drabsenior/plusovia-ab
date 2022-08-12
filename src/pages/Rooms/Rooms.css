@@ -96,7 +96,7 @@
   }
   .roompageright {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     margin-left: 0px;
   }
 }
