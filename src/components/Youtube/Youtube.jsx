@@ -4,12 +4,12 @@ const Youtube = () => {
   return (
     <div className="youtubewrapper">
       <iframe
-        src="https://www.youtube.com/embed/E7wJTI-1dvQ"
+        src="https://www.youtube.com/embed/ayl7ylTXPGQ"
+        title="YouTube video player"
         frameborder="0"
-        allow="autoplay; encrypted-media"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
-        title="video"
-      />
+      ></iframe>
     </div>
   );
 };
