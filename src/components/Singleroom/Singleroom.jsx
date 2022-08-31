@@ -2,7 +2,7 @@ import React from "react";
 import { AiFillStar } from "react-icons/ai";
 import { BsDot } from "react-icons/bs";
 import "./Singleroom.css";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Room1 from "../../assets/Images/room1.png";
 import Room2 from "../../assets/Images/room2.png";
@@ -70,7 +70,9 @@ const Singleroom = () => {
             })}
 
             <div className="roombutton">
-              <button>Book Now</button>
+              <Link to="/book">
+                <button>Book Now</button>
+              </Link>
             </div>
           </div>
           <div className="roompageright">

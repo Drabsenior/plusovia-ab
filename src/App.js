@@ -8,12 +8,14 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Singleroom from "./components/Singleroom/Singleroom";
 import ScrollToTop from "./ScrollTop";
+import Book from "./components/Book/Book";
 function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
         <Route path="/about" element={<About />} />
+        <Route path="/book" element={<Book />} />
         <Route path="/rooms" element={<Rooms />} />
         <Route exact path="/" element={<Home />}></Route>
         <Route path="/room/:Id" element={<Singleroom />}></Route>
