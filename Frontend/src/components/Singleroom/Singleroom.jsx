@@ -9,34 +9,33 @@ import Room2 from "../../assets/Images/room2.png";
 import Room3 from "../../assets/Images/room3.png";
 import Footer from "../Footer/Footer";
 import Rooms from "../Room/Room";
-
+export const items = [
+  {
+    id: 1,
+    image: Room1,
+    name: "Master Bed Room Sweet",
+    price: "800birr",
+    desc: "Our Master bed rooms are the highest levels of our service encompassing all our high end quality service this will be a choice you won't regret.",
+    includes: ["tv", "Microwave", "bathroom"],
+  },
+  {
+    id: 2,
+    image: Room2,
+    name: "Double Bed Room",
+    price: "600birr",
+    desc: "Our Master bed rooms are the highest levels of our service encompassing all our high end quality service this will be a choice you won't regret.",
+    includes: ["tv", "Microwave", "bathroom"],
+  },
+  {
+    id: 3,
+    image: Room3,
+    name: "Single Bed Room",
+    price: "450birr",
+    desc: "Our Master bed rooms are the highest levels of our service encompassing all our high end quality service this will be a choice you won't regret.",
+    includes: ["tv", "Microwave", "bathroom"],
+  },
+];
 const Singleroom = () => {
-  const items = [
-    {
-      id: 1,
-      image: Room1,
-      name: "Master Bed Room Sweet",
-      price: "800birr",
-      desc: "Our Master bed rooms are the highest levels of our service encompassing all our high end quality service this will be a choice you won't regret.",
-      includes: ["tv", "Microwave", "bathroom"],
-    },
-    {
-      id: 2,
-      image: Room2,
-      name: "Double Bed Room",
-      price: "600birr",
-      desc: "Our Master bed rooms are the highest levels of our service encompassing all our high end quality service this will be a choice you won't regret.",
-      includes: ["tv", "Microwave", "bathroom"],
-    },
-    {
-      id: 3,
-      image: Room3,
-      name: "Single Bed Room",
-      price: "450birr",
-      desc: "Our Master bed rooms are the highest levels of our service encompassing all our high end quality service this will be a choice you won't regret.",
-      includes: ["tv", "Microwave", "bathroom"],
-    },
-  ];
   const { Id } = useParams();
   const room = items.find((roo) => roo.id === parseInt(Id));
   console.log(items);
@@ -70,7 +69,7 @@ const Singleroom = () => {
             })}
 
             <div className="roombutton">
-              <Link to="/book">
+              <Link to={`/book/${room.id}`}>
                 <button>Book Now</button>
               </Link>
             </div>
