@@ -9,6 +9,7 @@ const Book = () => {
     handleSubmit();
   }, [nameRef, phoneRef, dateRef]);
   const handleSubmit = () => {
+    console.log(book);
     setBook({
       Name: nameRef.current.value,
       Phone: phoneRef.current.value,
