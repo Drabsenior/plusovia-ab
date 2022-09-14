@@ -1,11 +1,17 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const Booking = require("./models/BookingSchema");
+const userRoutes = require("./routes/userRoutes");
 const cors = require("cors");
 const Pusher = require("pusher");
 const app = express();
-
+const {
+  registerUser,
+  loginUser,
+  getMe,
+} = require("./controllers/userController");
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
 mongoose.connect(
@@ -71,6 +77,8 @@ app.post("/book", async (req, res) => {
     console.log(err);
   }
 });
+app.use("/auth/kokebpension", userRoutes);
+app.use("/auth/kokebpension/login", loginUser);
 
 app.listen(5000, () => {
   console.log("Listening at server 5000...");

@@ -43,38 +43,45 @@ const Book = () => {
 
   return (
     <div className="bookingwrapper">
-      <h2>Booking Form</h2>
-      <div className="bookcontainer">
-        <div className="inputsbooking">
-          <label htmlFor="">Name:</label>
-          <input type="text" placeholder="Full Name" id="name" ref={nameRef} />
+      <div className="borderwrapper">
+        <h2>Booking Form</h2>
+        <div className="bookcontainer">
+          <div className="inputsbooking">
+            <label htmlFor="">Name:</label>
+            <input
+              type="text"
+              placeholder="Full Name"
+              id="name"
+              ref={nameRef}
+            />
+          </div>
+          <div className="inputsbooking">
+            <label htmlFor="">Phone:</label>
+            <input
+              type="text"
+              placeholder="Phone Number"
+              id="phone"
+              ref={phoneRef}
+            />
+          </div>
+          <div className="inputsbooking">
+            <label htmlFor="">Date to book:</label>
+            <input
+              type="date"
+              id="date"
+              ref={dateRef}
+              min={currentdate}
+              max={currentdate}
+            />
+          </div>
+          <button onClick={() => handleSubmit()}>Submit</button>
         </div>
-        <div className="inputsbooking">
-          <label htmlFor="">Phone:</label>
-          <input
-            type="text"
-            placeholder="Phone Number"
-            id="phone"
-            ref={phoneRef}
-          />
-        </div>
-        <div className="inputsbooking">
-          <label htmlFor="">Date to book:</label>
-          <input
-            type="date"
-            id="date"
-            ref={dateRef}
-            min={currentdate}
-            max={currentdate}
-          />
-        </div>
-        <button onClick={() => handleSubmit()}>Submit</button>
-      </div>
 
-      {/* <h1>{item.roomname}</h1>
+        {/* <h1>{item.roomname}</h1>
       <h2>{item.fullName}</h2>
       <h2>{item.phone}</h2>
-      <span>{item.date}</span> */}
+    <span>{item.date}</span> */}
+      </div>
     </div>
   );
 };
