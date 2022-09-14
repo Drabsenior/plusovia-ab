@@ -16,7 +16,8 @@ function App() {
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
-        <Route path="/auth/kokebpenion" element={<Login />} />
+        <Route path="/auth/kokebpension/admin" element={<Admin />} />
+        <Route path="/auth/kokebpension" element={<Login />} />
         <Route path="/about" element={<About />} />
         <Route path="/book/:Id" element={<Book />} />
         <Route path="/rooms" element={<Rooms />} />

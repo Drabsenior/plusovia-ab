@@ -1,12 +1,16 @@
 import React from "react";
 import "./Login.css";
 import axios from "../../axios";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 const Login = () => {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
+
   const usernameRef = React.useRef();
   const passwordRef = React.useRef();
+
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = {
@@ -15,8 +19,16 @@ const Login = () => {
     };
     setUsername(usernameRef.current.value);
     setPassword(passwordRef.current.value);
+    console.log(username, password);
+
+    axios
+      .post("/auth/kokebpension/login", data)
+
+      .then((response) => {
+        console.log(response.data);
+        navigate("/auth/kokebpension/admin");
+      });
   };
-  axios.post("/auth/kokebpension/login", { username, password });
 
   return (
     <div className="logincontainer">

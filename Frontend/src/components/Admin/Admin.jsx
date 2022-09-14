@@ -5,6 +5,7 @@ import Pusher from "pusher-js";
 import axios from "../../axios";
 import { useEffect } from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const Admin = () => {
   const [bookings, setBookings] = useState();
   useEffect(() => {
@@ -34,7 +35,9 @@ const Admin = () => {
         <div className="adminnav">
           <div className="loginnavitems">
             <img src={pic} alt="" />
-            <button>Logout</button>
+            <Link to="/auth/kokebpension">
+              <button>Logout</button>
+            </Link>
           </div>
         </div>
         <div className="adminsidebar">

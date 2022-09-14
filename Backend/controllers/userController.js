@@ -56,9 +56,10 @@ const loginUser = asyncHandler(async (req, res) => {
       username: user.username,
       //   token: generateToken(user._id),
     });
+    res.send("you logged in successfully");
   } else {
     res.status(400);
-    res.send("dont match");
+    res.send("Incorrect credentials");
   }
 });
 
