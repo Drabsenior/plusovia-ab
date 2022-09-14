@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const Booking = require("./models/BookingSchema");
 const cors = require("cors");
+const Pusher = require("pusher");
 const app = express();
 
 app.use(express.json());
@@ -13,13 +14,44 @@ mongoose.connect(
     useNewUrlParser: true,
   }
 );
+
+const pusher = new Pusher({
+  appId: "1477244",
+  key: "5a7bef362fc9a24e832d",
+  secret: "1b6bce3e471dbbf24433",
+  cluster: "ap2",
+  useTLS: true,
+});
+
+const db = mongoose.connection;
+
+db.once("open", () => {
+  console.log("db connected");
+  const msgcollection = db.collection("bookings");
+  const changeStream = msgcollection.watch();
+
+  changeStream.on("change", (change) => {
+    console.log("change occured", change);
+    if (change.operationType === "insert") {
+      const messageDetails = change.fullDocument;
+      pusher.trigger("message", "inserted", {
+        fullname: messageDetails.fullName,
+        room: messageDetails.room,
+        phone: messageDetails.phone,
+        date: messageDetails.date,
+      });
+    } else {
+      console.log("error triggering pusher");
+    }
+  });
+});
 app.get("/read", async (req, res) => {
   Booking.find({}, (err, result) => {
     if (err) {
       res.send(err);
     }
     res.send(result);
-  });
+  }).sort({ createdAt: -1 });
 });
 app.post("/book", async (req, res) => {
   const fullName = req.body.fullname;

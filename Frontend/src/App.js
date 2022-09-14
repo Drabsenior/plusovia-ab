@@ -9,11 +9,14 @@ import Home from "./pages/Home/Home";
 import Singleroom from "./components/Singleroom/Singleroom";
 import ScrollToTop from "./ScrollTop";
 import Book from "./components/Book/Book";
+import Login from "./components/Login/Login";
+import Admin from "./components/Admin/Admin";
 function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
+        <Route path="/auth/kokebpenion" element={<Login />} />
         <Route path="/about" element={<About />} />
         <Route path="/book/:Id" element={<Book />} />
         <Route path="/rooms" element={<Rooms />} />
