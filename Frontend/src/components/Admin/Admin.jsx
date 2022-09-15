@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Admin.css";
 import pic from "../../assets/Images/logo.png";
 import Pusher from "pusher-js";
@@ -6,7 +6,9 @@ import axios from "../../axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { LoginContext } from "../../Context/LoginContext";
 const Admin = () => {
+  const { setLoginauth } = useContext(LoginContext);
   const [bookings, setBookings] = useState();
   useEffect(() => {
     axios
@@ -25,19 +27,22 @@ const Admin = () => {
     const channel = pusher.subscribe("message");
     channel.bind("inserted", function (newmessage) {
       alert(JSON.stringify(newmessage));
-      setBookings([...bookings, newmessage]);
+      setBookings(
+        [newmessage, ...bookings].sort((a, b) => a.createdAt - b.createdAt)
+      );
     });
   }, [bookings]);
-
+  const handleLogout = () => {
+    setLoginauth(false);
+  };
   return (
     <div className="adminwholecontainer">
       <div className="adminpagecontainer">
         <div className="adminnav">
           <div className="loginnavitems">
             <img src={pic} alt="" />
-            <Link to="/auth/kokebpension">
-              <button>Logout</button>
-            </Link>
+
+            <button onClick={handleLogout}>Logout</button>
           </div>
         </div>
         <div className="adminsidebar">

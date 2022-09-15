@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Login.css";
 import axios from "../../axios";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { LoginContext } from "../../Context/LoginContext";
 const Login = () => {
+  const { loginauth, setLoginauth } = useContext(LoginContext);
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
 
@@ -27,6 +29,7 @@ const Login = () => {
       .then((response) => {
         console.log(response.data);
         navigate("/auth/kokebpension/admin");
+        setLoginauth(true);
       });
   };
 

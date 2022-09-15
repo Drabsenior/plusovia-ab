@@ -11,20 +11,30 @@ import ScrollToTop from "./ScrollTop";
 import Book from "./components/Book/Book";
 import Login from "./components/Login/Login";
 import Admin from "./components/Admin/Admin";
+import PrivateRoutes from "./utilis/PrivateRoutes";
+import { LoginContext } from "./Context/LoginContext";
+import { useState } from "react";
 function App() {
+  const [loginauth, setLoginauth] = useState(false);
+  console.log(loginauth);
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <Routes>
-        <Route path="/auth/kokebpension/admin" element={<Admin />} />
-        <Route path="/auth/kokebpension" element={<Login />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/book/:Id" element={<Book />} />
-        <Route path="/rooms" element={<Rooms />} />
-        <Route exact path="/" element={<Home />}></Route>
-        <Route path="/room/:Id" element={<Singleroom />}></Route>
-      </Routes>
-    </BrowserRouter>
+    <LoginContext.Provider value={{ loginauth, setLoginauth }}>
+      <BrowserRouter>
+        <ScrollToTop />
+        <Routes>
+          <Route element={<PrivateRoutes />}>
+            <Route element={<Admin />} path="auth/kokebpension/admin" exact />
+          </Route>
+          <Route path="/auth/kokebpension/admin" element={<Admin />} />
+          <Route path="/auth/kokebpension" element={<Login />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/book/:Id" element={<Book />} />
+          <Route path="/rooms" element={<Rooms />} />
+          <Route exact path="/" element={<Home />}></Route>
+          <Route path="/room/:Id" element={<Singleroom />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </LoginContext.Provider>
   );
 }
 
