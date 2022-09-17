@@ -15,7 +15,7 @@ const Book = () => {
   const { Id } = useParams();
   const room = items.find((roo) => roo.id === parseInt(Id));
   useEffect(() => {
-    Axios.get("http://localhost:5000/read").then((response) => {
+    Axios.get("https://kokebpension.herokuapp.com/read").then((response) => {
       setBookded("man");
       console.log(booked);
     });
@@ -48,7 +48,7 @@ const Book = () => {
     ) {
       notify("empty");
     }
-    Axios.post("http://localhost:5000/book", {
+    Axios.post("https://kokebpension.herokuapp.com/book", {
       fullname: nameRef.current.value,
       roomname: room.name,
       phone: phoneRef.current.value,
