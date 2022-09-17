@@ -3,6 +3,8 @@ import { Link, useParams } from "react-router-dom";
 import { items } from "../Singleroom/Singleroom";
 import Axios from "axios";
 import "./Book.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Book = () => {
   const [book, setBook] = useState({});
   const [booked, setBookded] = useState([]);
@@ -22,12 +24,40 @@ const Book = () => {
   const currentdate = `${current.getFullYear()}-${current.getMonth()}-${current.getDate()}`;
 
   console.log(currentdate);
+
+  const notify = (arg) => {
+    if (arg === "success") {
+      toast.success("Booked successfully", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: true,
+      });
+    } else if ("empty") {
+      toast.error("Fileds are empty!", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: true,
+      });
+    }
+  };
   const handleSubmit = () => {
+    if (
+      !nameRef.current.value ||
+      !phoneRef.current.value ||
+      !dateRef.current.value
+    ) {
+      notify("empty");
+    }
     Axios.post("http://localhost:5000/book", {
       fullname: nameRef.current.value,
       roomname: room.name,
       phone: phoneRef.current.value,
       date: dateRef.current.value,
+    }).then(() => {
+      notify("success");
+      nameRef.current.value = "";
+      phoneRef.current.value = "";
+      dateRef.current.value = "";
     });
     const mxdate = `${
       current.getFullYear() + 1
@@ -58,7 +88,7 @@ const Book = () => {
           <div className="inputsbooking">
             <label htmlFor="">Phone:</label>
             <input
-              type="text"
+              type="number"
               placeholder="Phone Number"
               id="phone"
               ref={phoneRef}
@@ -75,6 +105,7 @@ const Book = () => {
             />
           </div>
           <button onClick={() => handleSubmit()}>Submit</button>
+          <ToastContainer />
         </div>
 
         {/* <h1>{item.roomname}</h1>

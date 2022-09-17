@@ -30,6 +30,11 @@ const Admin = () => {
       setBookings(
         [newmessage, ...bookings].sort((a, b) => a.createdAt - b.createdAt)
       );
+
+      return () => {
+        channel.unbind_all();
+        channel.unsubscribe();
+      };
     });
   }, [bookings]);
   const handleLogout = () => {
