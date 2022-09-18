@@ -4,6 +4,7 @@ const Booking = require("./models/BookingSchema");
 const dotenv = require("dotenv");
 const userRoutes = require("./routes/userRoutes");
 const cors = require("cors");
+const path = require("path");
 const Pusher = require("pusher");
 const app = express();
 const {
@@ -78,6 +79,20 @@ app.post("/book", async (req, res) => {
 });
 app.use("/auth/kokebpension", userRoutes);
 app.use("/auth/kokebpension/login", loginUser);
+
+//deployment
+__dirname = path.resolve();
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "/Frontend/build")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "Frontend", "build", "index.html"));
+  });
+} else {
+  app.get("/", (req, res) => {
+    res.send("api is running");
+  });
+}
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
