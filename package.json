@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "devstart": "nodemon app.js"
+    "start": "nodemon Backend/index.js",
+    "client": "npm start --prefix Frontend",
+    "dev": "concurrnetly \"npm start\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFG_PRODUCTION=false npm install --prefix Frontend && npm run build  --prefix Frontend"
   },
   "author": "",
   "license": "ISC",
