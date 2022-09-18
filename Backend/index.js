@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const Booking = require("./models/BookingSchema");
+const dotenv = require("dotenv");
 const userRoutes = require("./routes/userRoutes");
 const cors = require("cors");
 const Pusher = require("pusher");
@@ -13,13 +14,10 @@ const {
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
-
-mongoose.connect(
-  "mongodb+srv://AbenezerMaregu:Truealpha123@cluster0.o4gs8he.mongodb.net/?retryWrites=true&w=majority",
-  {
-    useNewUrlParser: true,
-  }
-);
+dotenv.config();
+mongoose.connect(process.env.MONGODB_URL, {
+  useNewUrlParser: true,
+});
 
 const pusher = new Pusher({
   appId: "1477244",
@@ -81,6 +79,7 @@ app.post("/book", async (req, res) => {
 app.use("/auth/kokebpension", userRoutes);
 app.use("/auth/kokebpension/login", loginUser);
 
-app.listen(5000, () => {
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
   console.log("Listening at server 5000...");
 });
